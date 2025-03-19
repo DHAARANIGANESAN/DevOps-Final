@@ -1,0 +1,22 @@
+DOCKER COMPOSE:
+
+-> sudo nano docker-compose.yaml
+
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
+
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+
+ctrl+s &ctrl+x
+
+-> sudo apt install docker-compose -y
+-> docker-compose up -d
+->docker exec -it akshitha-db-1 /bin/bash
